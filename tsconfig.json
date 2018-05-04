@@ -1,0 +1,19 @@
+{
+  "files": [
+    "index.ts"
+  ],
+  "compilerOptions": {
+    "lib": ["es2017"],
+    "types": ["node"],
+    "alwaysStrict": true,
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "target": "es2017"
+  }
+}
