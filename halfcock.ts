@@ -10,7 +10,7 @@ const FULL = "█";
 const HALF = "▀";
 const COLOR = "";
 
-export async function imageToIrc(buffer: Buffer, pal: Pal = 99, w = 70, h = 1000): Promise<string[]> {
+export async function halfcock(buffer: Buffer, pal: Pal = 99, w = 70, h = 1000): Promise<string[]> {
   const image = await sharp(buffer)
     .background("#ffffffff")
     .flatten()
