@@ -17,6 +17,6 @@
     "get-pixels": "^3.3.0",
     "nearest-color": "^0.4.2",
     "rgb-hex": "^2.1.0",
-    "sharp": "0.20.0"
+    "sharp": "0.30.5"
   }
 }
