@@ -10,13 +10,14 @@ const FULL = "█";
 const HALF = "▀";
 const COLOR = "";
 
-export async function halfcock(buffer: Buffer, pal: Pal = 99, w = 70, h = 1000): Promise<string[]> {
+export async function halfcock(buffer: Buffer, pal: Pal = 99, w = 70, h = 1000, bgcolor = { r:255, g:255, b:255 }): Promise<string[]> {
   const image = await sharp(buffer)
-    .background("#ffffffff")
-    .flatten()
-    .resize(w, h)
-    .max()
-    .withoutEnlargement()
+    .flatten({ background: '#'+rgbHex(bgcolor.r, bgcolor.g, bgcolor.b) })
+    .resize(w, h, {
+      background: bgcolor,
+      withoutEnlargement: true,
+      fit: 'inside'
+    })
     .toFormat("png")
     .toBuffer();
   let pixels = await getPixels(image, "image/png");
